@@ -1,19 +1,20 @@
-
-"""Utility and auxiliary functions for `repo_template.utils.aux_funcs` module."""
+"""Utility and auxiliary functions, `repo_template.utils.aux_funcs`, for repo_template library."""
 
 import subprocess
 
+
 def execute_command(command: str) -> subprocess.CompletedProcess:
     """Execute provided command.
-    
+
     This function exists for sphinx docs demonstration.
 
     Args:
-        uninstall_command (str): Command to be executed.
+        command (str): Command to be executed.
 
     Returns:
         subprocess.CompletedProcess: Executed command details.
     """
+
     uninstall_command_return = subprocess.run(
         command,
         shell=True,
@@ -23,7 +24,10 @@ def execute_command(command: str) -> subprocess.CompletedProcess:
 
     return uninstall_command_return
 
-def parse_out_response(uninstall_command_return: subprocess.CompletedProcess) -> str:
+
+def parse_out_response(
+    uninstall_command_return: subprocess.CompletedProcess,
+) -> str:
     """Parse out response from executed command.
 
     This function exists for sphinx docs demonstration.
@@ -34,8 +38,9 @@ def parse_out_response(uninstall_command_return: subprocess.CompletedProcess) ->
     Returns:
         str: Response from executing command.
     """
-    # Print results.
-    if uninstall_command_return.stderr != b'':
+
+    # Parse and display results.
+    if uninstall_command_return.stderr != b"":
         response = uninstall_command_return.stderr
         print(f"Returned Error: {response}")
     else:

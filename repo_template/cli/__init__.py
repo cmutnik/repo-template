@@ -1,5 +1,5 @@
-
 """Main CLI script."""
+
 
 def main():
     """Docstring explaining why typer messes up if imports arent in the fucntion."""
@@ -7,7 +7,6 @@ def main():
     import typer
     from wasabi import msg
     from repo_template.cli.example import example
-
 
     commands = {
         "run_example": example,

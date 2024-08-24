@@ -1,4 +1,3 @@
-
 """Example CLI code for template repo."""
 
 import typer
@@ -18,23 +17,30 @@ app = typer.Typer(
     rich_markup_mode="rich",
 )
 
+
 @app.command(
-        "example",
-        context_settings={"allow_extra_args": True, "ignore_unknown_options": True}
+    "example",
+    context_settings={"allow_extra_args": True, "ignore_unknown_options": True},
 )
 def example(
-    ctx: typer.Context, # This is only used to read additional arguments
+    ctx: typer.Context,  # This is only used to read additional arguments
     command: Annotated[
-        str, typer.Argument(...,
+        str,
+        typer.Argument(
+            ...,
             help=f"{colored('Required', required_color)} Command to be executed.",
-            rich_help_panel=f"{colored("Required", required_color)} Inputs"
-        )
+            rich_help_panel=f"{colored("Required", required_color)} Inputs",
+        ),
     ],
     run_not_echo: Annotated[
-        bool, typer.Option("--no-echo/--echo", "--run/--no-run", "-r/-R", 
+        bool,
+        typer.Option(
+            "--no-echo/--echo",
+            "--run/--no-run",
+            "-r/-R",
             help=f"{colored('Optional', optional_color)} Option to run or echo the entered command.",
-            rich_help_panel=f"{colored("Optional", optional_color)} Inputs"
-        )
+            rich_help_panel=f"{colored("Optional", optional_color)} Inputs",
+        ),
     ] = False,
 ):
     if run_not_echo:
@@ -44,6 +50,8 @@ def example(
 
     uninstall_command_return = execute_command(command=uninstall_command)
 
-    response = parse_out_response(uninstall_command_return=uninstall_command_return)
+    response = parse_out_response(
+        uninstall_command_return=uninstall_command_return
+    )
 
     return response
