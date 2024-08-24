@@ -20,7 +20,7 @@ where = ["."]
 namespaces = false
 
 [project.scripts]
-repo_template = "repo_template:main"
+repo_template = "repo_template.cli:main"
 
 [build-system]
 requires = ["setuptools>=43.0.0", "wheel"]

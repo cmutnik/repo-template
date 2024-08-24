@@ -3,9 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Ignore `.. include:: ../README.md`
+.. Rather than using: `.. include:: README.rst` and 
+   inside that file having `.. include:: ../README.md` 
+   just copy file and add to toctree, to preserve formatting.
 
-.. include:: README.rst
+.. include:: ../README.md
 
 Notes about project.
 

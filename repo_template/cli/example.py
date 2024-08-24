@@ -2,9 +2,10 @@
 """Example CLI code for template repo."""
 
 import typer
-import subprocess
 from termcolor import colored
 from typing_extensions import Annotated
+
+from repo_template.utils.aux_funcs import execute_command, parse_out_response
 
 typer.rich_utils.STYLE_METAVAR = "bold"
 required_color = "light_red"
@@ -41,18 +42,8 @@ def example(
     else:
         uninstall_command = f"echo '{command}'"
 
-    uninstall_command_return = subprocess.run(
-        uninstall_command,
-        shell=True,
-        stderr=subprocess.PIPE,
-        stdout=subprocess.PIPE,
-    )
+    uninstall_command_return = execute_command(command=uninstall_command)
 
-    # Print results.
-    if uninstall_command_return.stderr != b'':
-        response = uninstall_command_return.stderr
-        print(f"Returned Error: {response}")
-    else:
-        response = uninstall_command_return.stdout.decode("utf-8")
-        print(f"Command that eas executed:\n{response}")
-    return 
+    response = parse_out_response(uninstall_command_return=uninstall_command_return)
+
+    return response
