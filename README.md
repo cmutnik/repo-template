@@ -1,4 +1,6 @@
-# repo-template #
+## Repo Template ##
+
+The Sphinx docs can be found [here](https://cmutnik.github.io/repo-template/).
 
 **Quick Start Guide**
 
