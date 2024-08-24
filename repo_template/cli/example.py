@@ -29,7 +29,7 @@ def example(
         typer.Argument(
             ...,
             help=f"{colored('Required', required_color)} Command to be executed.",
-            rich_help_panel=f"{colored("Required", required_color)} Inputs",
+            rich_help_panel=f"{colored('Required', required_color)} Inputs",
         ),
     ],
     run_not_echo: Annotated[
@@ -39,7 +39,7 @@ def example(
             "--run/--no-run",
             "-r/-R",
             help=f"{colored('Optional', optional_color)} Option to run or echo the entered command.",
-            rich_help_panel=f"{colored("Optional", optional_color)} Inputs",
+            rich_help_panel=f"{colored('Optional', optional_color)} Inputs",
         ),
     ] = False,
 ):
