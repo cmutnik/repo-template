@@ -1,4 +1,5 @@
 
+"""Main CLI script."""
 
 def main():
     """Docstring explaining why typer messes up if imports arent in the fucntion."""

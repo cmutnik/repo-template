@@ -1,3 +1,6 @@
+
+"""Example CLI code for template repo."""
+
 import typer
 import subprocess
 from termcolor import colored
@@ -44,5 +47,12 @@ def example(
         stderr=subprocess.PIPE,
         stdout=subprocess.PIPE,
     )
-    print(uninstall_command_return)
-    return
+
+    # Print results.
+    if uninstall_command_return.stderr != b'':
+        response = uninstall_command_return.stderr
+        print(f"Returned Error: {response}")
+    else:
+        response = uninstall_command_return.stdout.decode("utf-8")
+        print(f"Command that eas executed:\n{response}")
+    return 
