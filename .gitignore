@@ -9,8 +9,6 @@ _build/
 *.sav
 docs/_build
 docs/build
-docs/source/_build
-docs/source/build
 
 nbsphinx-template/
 
