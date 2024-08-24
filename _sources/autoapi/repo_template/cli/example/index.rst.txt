@@ -1,0 +1,50 @@
+repo_template.cli.example
+=========================
+
+.. py:module:: repo_template.cli.example
+
+.. autoapi-nested-parse::
+
+   Example CLI code for template repo.
+
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   repo_template.cli.example.required_color
+   repo_template.cli.example.optional_color
+   repo_template.cli.example.Arg
+   repo_template.cli.example.Opt
+   repo_template.cli.example.app
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   repo_template.cli.example.example
+
+
+Module Contents
+---------------
+
+.. py:data:: required_color
+   :value: 'light_red'
+
+
+.. py:data:: optional_color
+   :value: 'light_green'
+
+
+.. py:data:: Arg
+
+.. py:data:: Opt
+
+.. py:data:: app
+
+.. py:function:: example(ctx: typer.Context, command: typing_extensions.Annotated[str, typer.Argument(..., help=f"{colored('Required', required_color)} Command to be executed.", rich_help_panel=f"{colored('Required', required_color)} Inputs")], run_not_echo: typing_extensions.Annotated[bool, typer.Option('--no-echo/--echo', '--run/--no-run', '-r/-R', help=f"{colored('Optional', optional_color)} Option to run or echo the entered command.", rich_help_panel=f"{colored('Optional', optional_color)} Inputs")] = False)
+

@@ -1,0 +1,49 @@
+repo_template.utils.aux_funcs
+=============================
+
+.. py:module:: repo_template.utils.aux_funcs
+
+.. autoapi-nested-parse::
+
+   Utility and auxiliary functions for `repo_template.utils.aux_funcs` module.
+
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   repo_template.utils.aux_funcs.execute_command
+   repo_template.utils.aux_funcs.parse_out_response
+
+
+Module Contents
+---------------
+
+.. py:function:: execute_command(command: str) -> subprocess.CompletedProcess
+
+   Execute provided command.
+
+   This function exists for sphinx docs demonstration.
+
+   :param uninstall_command: Command to be executed.
+   :type uninstall_command: str
+
+   :returns: Executed command details.
+   :rtype: subprocess.CompletedProcess
+
+
+.. py:function:: parse_out_response(uninstall_command_return: subprocess.CompletedProcess) -> str
+
+   Parse out response from executed command.
+
+   This function exists for sphinx docs demonstration.
+
+   :param uninstall_command_return: Executed command details.
+   :type uninstall_command_return: subprocess.CompletedProcess
+
+   :returns: Response from executing command.
+   :rtype: str
+
+

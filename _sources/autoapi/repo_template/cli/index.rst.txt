@@ -1,0 +1,36 @@
+repo_template.cli
+=================
+
+.. py:module:: repo_template.cli
+
+.. autoapi-nested-parse::
+
+   Main CLI script.
+
+
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/repo_template/cli/example/index
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   repo_template.cli.main
+
+
+Package Contents
+----------------
+
+.. py:function:: main()
+
+   Docstring explaining why typer messes up if imports arent in the fucntion.
+
+

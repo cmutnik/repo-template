@@ -1,0 +1,16 @@
+repo_template
+=============
+
+.. py:module:: repo_template
+
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/repo_template/cli/index
+   /autoapi/repo_template/utils/index
+
+

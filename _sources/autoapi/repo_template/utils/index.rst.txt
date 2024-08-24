@@ -1,0 +1,15 @@
+repo_template.utils
+===================
+
+.. py:module:: repo_template.utils
+
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/repo_template/utils/aux_funcs/index
+
+
