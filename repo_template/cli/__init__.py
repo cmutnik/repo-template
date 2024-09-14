@@ -7,9 +7,11 @@ def main():
     import typer
     from wasabi import msg
     from repo_template.cli.example import example
+    from repo_template.cli.print_fonts import print_fonts
 
     commands = {
         "run_example": example,
+        "print_fonts": print_fonts,
     }
     if len(sys.argv) == 1:
         msg.info("Available commands", ", ".join(commands), exits=1)

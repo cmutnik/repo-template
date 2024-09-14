@@ -1,7 +1,7 @@
 """Utility and auxiliary functions, `repo_template.utils.aux_funcs`, for repo_template library."""
 
 import subprocess
-
+from terminology import in_blue
 
 def execute_command(command: str) -> subprocess.CompletedProcess:
     """Execute provided command.
@@ -42,9 +42,12 @@ def parse_out_response(
     # Parse and display results.
     if uninstall_command_return.stderr != b"":
         response = uninstall_command_return.stderr
-        print(f"Returned Error: {response}")
+        resp_text = "Returned Error: "
     else:
         response = uninstall_command_return.stdout.decode("utf-8")
-        print(f"Response:\n\n{response}")
+        resp_text = "Response:"
+    
+    print(in_blue(resp_text).in_bold().underlined())
+    print(f"{response}")
 
     return response

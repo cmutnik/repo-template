@@ -13,6 +13,9 @@ dependencies = [
   "typer-cli", # 0.12.0
   "wasabi",
   "termcolor",
+  "pyfiglet",
+  # "colorama",
+  "terminology",
 ]
 
 [tool.setuptools.packages.find]
